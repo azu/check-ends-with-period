@@ -10,7 +10,7 @@
     "src/"
   ],
   "name": "check-ends-with-period",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check the text is ends with period mark.",
   "main": "lib/check-ends-with-period.js",
   "scripts": {
