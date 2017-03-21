@@ -8,9 +8,9 @@ const exceptionMarkRegExp = /[!?！？\)）」』]/;
 /**
  * Check ends with period.
  * @param {string} lineText
- * @param {string[]} periodMarks
- * @param {boolean} allowExceptionMark often used at end.
- * @param {boolean} allowEmoji
+ * @param {string[]} [periodMarks]
+ * @param {boolean} [allowExceptionMark] often used at end.
+ * @param {boolean} [allowEmoji]
  * @returns {{valid: boolean, periodMark: string, index: number}}
  *
  * `index` is index value of last character.
