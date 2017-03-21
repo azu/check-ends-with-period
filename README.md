@@ -50,7 +50,7 @@ checkEndsWithPeriod("text.", {
 */
 
 // invalid: forget periodMark
-checkEndsWithPeriod("text")
+checkEndsWithPeriod("text");
 /**
 {
     valid: false,
