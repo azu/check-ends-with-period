@@ -1,4 +1,4 @@
-# check-ends-with-period
+# check-ends-with-period [![Build Status](https://travis-ci.org/azu/check-ends-with-period.svg?branch=master)](https://travis-ci.org/azu/check-ends-with-period)
 
 Check the text is ends with period mark.
 
