@@ -18,18 +18,24 @@
   "author": "azu",
   "main": "lib/check-ends-with-period.js",
   "types": "lib/check-ends-with-period.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/check-ends-with-period.js",
+      "import": "./module/check-ends-with-period.js"
+    }
+  },
   "directories": {
     "test": "test"
   },
   "files": [
     "bin/",
     "lib/",
+    "module/",
     "src/"
   ],
   "scripts": {
-    "build": "tsc -p .",
+    "build": "tsc -p . && tsc -p tsconfig.module.json",
     "prepublishOnly": "npm run build",
-    "prepublish": "npm run --if-present build",
     "test": "mocha \"test/**/*.{js,ts}\"",
     "watch": "tsc -p . --watch"
   },
