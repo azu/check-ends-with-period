@@ -40,6 +40,6 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "emoji-regex": "^6.4.1"
+    "emoji-regex": "^10.1.0"
   }
 }
