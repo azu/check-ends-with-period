@@ -40,8 +40,6 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "array.prototype.find": "^2.0.3",
-    "emoji-regex": "^6.4.1",
-    "end-with": "^1.0.2"
+    "emoji-regex": "^6.4.1"
   }
 }
