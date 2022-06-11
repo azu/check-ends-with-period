@@ -1,5 +1,5 @@
-import assert from "assert";
-import { checkEndsWithPeriod } from "../src/check-ends-with-period";
+import assert from "node:assert";
+import { checkEndsWithPeriod } from "../src/check-ends-with-period.js";
 describe("check-ends-with-period", () => {
     context("when period is end", () => {
         it("should return valid:true result", () => {
@@ -43,7 +43,7 @@ describe("check-ends-with-period", () => {
             });
         });
     });
-    
+
     context("when exclamation mark is end", () => {
         it("allowExceptionMark:true and should return valid:true result", () => {
             const result = checkEndsWithPeriod("text!", {

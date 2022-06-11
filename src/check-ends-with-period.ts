@@ -2,7 +2,6 @@
 import emoji_regex from "emoji-regex";
 const emojiRegExp = emoji_regex();
 const exceptionMarkRegExp = /[!?！？)）」』]/;
-
 export type CheckEndsWithPeriodOptions = {
     periodMarks?: string[]
     allowExceptionMark?: boolean
