@@ -32,14 +32,12 @@
   },
   "homepage": "https://github.com/azu/check-ends-with-period",
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-preset-jsdoc-to-assert": "^4.0.0",
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-power-assert": "^1.0.0",
-    "babel-register": "^6.24.0",
-    "cross-env": "^3.2.4",
-    "mocha": "^3.2.0",
-    "power-assert": "^1.4.2"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.0.0"
   },
   "dependencies": {
     "array.prototype.find": "^2.0.3",
