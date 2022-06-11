@@ -1,8 +1,13 @@
 // MIT © 2017 azu
-"use strict";
-const emojiRegExp = require("emoji-regex")();
-const exceptionMarkRegExp = /[!?！？\)）」』]/;
+import emoji_regex from "emoji-regex";
+const emojiRegExp = emoji_regex();
+const exceptionMarkRegExp = /[!?！？)）」』]/;
 
+export type CheckEndsWithPeriodOptions = {
+    periodMarks?: string[]
+    allowExceptionMark?: boolean
+    allowEmoji?: boolean;
+}
 /**
  * Check ends with period.
  * @param {string} lineText
@@ -16,17 +21,21 @@ const exceptionMarkRegExp = /[!?！？\)）」』]/;
  * If last character is not a parts of periodMarks, `index` is the position of the last character.
  * If last character is white space, `index` is the position of starting of white space on the end.
  */
-const checkEndsWithPeriod = function(lineText, {
+export const checkEndsWithPeriod = function (lineText: string, {
     periodMarks = ["。", "."],
     allowExceptionMark = true,
     allowEmoji = false,
-} = {}) {
+}: CheckEndsWithPeriodOptions = {}) {
     // サロゲートペアを考慮した文字列長・文字アクセス
     const characters = [...lineText];
     const lastCharacterIndex = characters.length - 1;
     const periodMark = characters[lastCharacterIndex];
     if (/\s/.test(periodMark)) {
-        const [whiteSpaces] = lineText.match(/\s+$/);
+        const result = lineText.match(/\s+$/);
+        if(!result){
+            return;
+        }
+        const [whiteSpaces] = result;
         return {
             valid: false,
             periodMark: whiteSpaces,
@@ -68,4 +77,3 @@ const checkEndsWithPeriod = function(lineText, {
         index: lastCharacterIndex
     };
 };
-module.exports = checkEndsWithPeriod;
