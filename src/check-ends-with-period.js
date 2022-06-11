@@ -1,7 +1,5 @@
 // MIT © 2017 azu
 "use strict";
-const find = require("array.prototype.find");
-const endWith = require("end-with");
 const emojiRegExp = require("emoji-regex")();
 const exceptionMarkRegExp = /[!?！？\)）」』]/;
 
@@ -54,8 +52,8 @@ const checkEndsWithPeriod = function(lineText, {
     /**
      * @type {string|undefined}
      */
-    const matchMark = find(periodMarks, (mark) => {
-        return endWith(lineText, mark);
+    const matchMark = periodMarks.find(mark => {
+        return lineText.endsWith(mark)
     });
     if (matchMark) {
         return {
