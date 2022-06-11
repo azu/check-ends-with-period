@@ -17,6 +17,7 @@
   "license": "MIT",
   "author": "azu",
   "main": "lib/check-ends-with-period.js",
+  "module": "module/check-ends-with-period.js",
   "types": "lib/check-ends-with-period.d.ts",
   "exports": {
     ".": {
