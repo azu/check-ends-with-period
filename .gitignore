@@ -84,3 +84,6 @@ crashlytics-build.properties
 
 /lib
 /module
+/mjs
+/esm
+/cjs
