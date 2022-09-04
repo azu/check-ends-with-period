@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "azu",
   "type": "module",
-  "main": "./mjs/index.mjs",
+  "main": "./cjs/index.cjs",
   "module": "./esm/index.js",
   "types": "lib/check-ends-with-period.d.ts",
   "exports": {
@@ -35,7 +35,7 @@
         "default": "./lib/index.js"
       },
       "node": {
-        "import": "./mjs/index.mjs",
+        "import": "./cjs/index-wrapper.mjs",
         "require": "./cjs/index.cjs"
       },
       "default": "./lib/index.js"
@@ -85,13 +85,6 @@
         "index": "src/check-ends-with-period.ts"
       },
       "format": "cjs",
-      "platform": "node"
-    },
-    {
-      "inputs": {
-        "index": "src/check-ends-with-period.ts"
-      },
-      "format": "mjs",
       "platform": "node"
     }
   ]
