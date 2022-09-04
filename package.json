@@ -4,7 +4,8 @@
   "description": "Check the text is ends with period mark.",
   "keywords": [
     "text",
-    "natural-language"
+    "natural-language",
+    "nlp"
   ],
   "homepage": "https://github.com/azu/check-ends-with-period",
   "bugs": {
