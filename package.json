@@ -59,7 +59,6 @@
     "build": "packemon build --addExports",
     "prepublishOnly": "npm run build",
     "test": "mocha \"test/**/*.{js,ts}\"",
-    "type-check": "mocha \"test/**/*.{js,ts}\"",
     "watch": "tsc -p . --watch"
   },
   "dependencies": {
