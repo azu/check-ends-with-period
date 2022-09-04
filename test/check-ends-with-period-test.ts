@@ -1,5 +1,5 @@
 import assert from "node:assert";
-import { checkEndsWithPeriod } from "../src/check-ends-with-period.js";
+import { checkEndsWithPeriod } from "../src/index.js";
 describe("check-ends-with-period", () => {
     context("when period is end", () => {
         it("should return valid:true result", () => {
