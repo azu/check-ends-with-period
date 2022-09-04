@@ -17,9 +17,6 @@
   "license": "MIT",
   "author": "azu",
   "type": "module",
-  "main": "./cjs/index.cjs",
-  "module": "./esm/index.js",
-  "types": "lib/check-ends-with-period.d.ts",
   "exports": {
     "./package.json": "./package.json",
     "./*": {
@@ -29,6 +26,7 @@
       }
     },
     ".": {
+      "types": "./dts/check-ends-with-period.d.ts",
       "browser": {
         "module": "./esm/index.js",
         "import": "./esm/index.js",
@@ -41,12 +39,16 @@
       "default": "./lib/index.js"
     }
   },
+  "main": "./cjs/index.cjs",
+  "module": "./esm/index.js",
+  "types": "./dts/check-ends-with-period.d.ts",
   "directories": {
     "test": "test"
   },
   "files": [
     "bin/",
     "cjs/**/*.{cjs,mjs,map}",
+    "dts/**/*.d.ts",
     "esm/**/*.{js,map}",
     "lib/",
     "lib/**/*.{js,map}",
@@ -56,7 +58,7 @@
     "src/**/*.{ts,tsx,json}"
   ],
   "scripts": {
-    "build": "packemon build --addExports",
+    "build": "packemon build --addExports --declaration",
     "prepublishOnly": "npm run build",
     "test": "mocha \"test/**/*.{js,ts}\"",
     "watch": "tsc -p . --watch"

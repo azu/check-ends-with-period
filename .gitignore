@@ -87,3 +87,4 @@ crashlytics-build.properties
 /mjs
 /esm
 /cjs
+/dts
