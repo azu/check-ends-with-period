@@ -27,7 +27,7 @@
       }
     },
     ".": {
-      "types": "./dts/index.d.ts",
+      "types": "./dts/check-ends-with-period.d.ts",
       "browser": {
         "module": "./esm/index.js",
         "import": "./esm/index.js",
@@ -42,7 +42,7 @@
   },
   "main": "./cjs/index.cjs",
   "module": "./esm/index.js",
-  "types": "./dts/index.d.ts",
+  "types": "./dts/check-ends-with-period.d.ts",
   "directories": {
     "test": "test"
   },
@@ -77,10 +77,16 @@
   },
   "packemon": [
     {
+      "inputs": {
+        "index": "src/check-ends-with-period.ts"
+      },
       "format": "esm",
       "platform": "browser"
     },
     {
+      "inputs": {
+        "index": "src/check-ends-with-period.ts"
+      },
       "format": "cjs",
       "platform": "node"
     }
