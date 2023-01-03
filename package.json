@@ -4,8 +4,7 @@
   "description": "Check the text is ends with period mark.",
   "keywords": [
     "text",
-    "natural-language",
-    "nlp"
+    "natural-language"
   ],
   "homepage": "https://github.com/azu/check-ends-with-period",
   "bugs": {
@@ -18,48 +17,26 @@
   "license": "MIT",
   "author": "azu",
   "type": "module",
+  "main": "lib/check-ends-with-period.js",
+  "module": "module/check-ends-with-period.js",
+  "types": "lib/check-ends-with-period.d.ts",
   "exports": {
-    "./package.json": "./package.json",
-    "./*": {
-      "node": {
-        "import": "./mjs/*.mjs",
-        "require": "./cjs/*.cjs"
-      }
-    },
     ".": {
-      "types": "./dts/check-ends-with-period.d.ts",
-      "browser": {
-        "module": "./esm/index.js",
-        "import": "./esm/index.js",
-        "default": "./lib/index.js"
-      },
-      "node": {
-        "import": "./cjs/index-wrapper.mjs",
-        "require": "./cjs/index.cjs"
-      },
-      "default": "./lib/index.js"
+      "require": "./lib/check-ends-with-period.js",
+      "import": "./module/check-ends-with-period.js"
     }
   },
-  "main": "./cjs/index.cjs",
-  "module": "./esm/index.js",
-  "types": "./dts/check-ends-with-period.d.ts",
   "directories": {
     "test": "test"
   },
   "files": [
     "bin/",
-    "cjs/**/*.{cjs,mjs,map}",
-    "dts/**/*.d.ts",
-    "esm/**/*.{js,map}",
     "lib/",
-    "lib/**/*.{js,map}",
-    "mjs/**/*.{mjs,map}",
     "module/",
-    "src/",
-    "src/**/*.{ts,tsx,json}"
+    "src/"
   ],
   "scripts": {
-    "build": "packemon build --addExports --declaration",
+    "build": "tsc -p . && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "npm run build",
     "test": "mocha \"test/**/*.{js,ts}\"",
     "watch": "tsc -p . --watch"
@@ -71,24 +48,7 @@
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.42",
     "mocha": "^10.0.0",
-    "packemon": "^2.4.0",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
-  },
-  "packemon": [
-    {
-      "inputs": {
-        "index": "src/check-ends-with-period.ts"
-      },
-      "format": "esm",
-      "platform": "browser"
-    },
-    {
-      "inputs": {
-        "index": "src/check-ends-with-period.ts"
-      },
-      "format": "cjs",
-      "platform": "node"
-    }
-  ]
+  }
 }
