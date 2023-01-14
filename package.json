@@ -43,7 +43,8 @@
     "build": "tsc -p . && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
     "watch": "tsc -p . --watch",
     "prepublishOnly": "npm run build",
-    "test": "mocha"
+    "test": "mocha",
+    "clean": "git clean -fx module/ lib/"
   },
   "dependencies": {
     "emoji-regex": "^10.1.0"
