@@ -33,7 +33,7 @@ export const checkEndsWithPeriod = function (lineText: string, {
     if (/\s/.test(periodMark)) {
         const result = lineText.match(/\s+$/);
         if (!result) {
-            // TODO: fix case will not ever happen
+            // TODO: this case will not ever happen
             return {
                 valid: false,
                 periodMark: " ",
