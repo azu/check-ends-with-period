@@ -23,8 +23,8 @@ describe("check-ends-with-period", () => {
             });
         });
     });
-    context("when whitespace is end", () => {
-        it("should return valid:false result", () => {
+    context("whitespace", () => {
+        it("should return valid:false result when whitespace is end", () => {
             const result = checkEndsWithPeriod("text   ");
             assert.deepEqual(result, {
                 valid: false,

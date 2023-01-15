@@ -1,5 +1,6 @@
 // MIT © 2017 azu
 import emoji_regex from "emoji-regex";
+
 const emojiRegExp = emoji_regex();
 const exceptionMarkRegExp = /[!?！？)）」』]/;
 export type CheckEndsWithPeriodOptions = {
@@ -31,8 +32,13 @@ export const checkEndsWithPeriod = function (lineText: string, {
     const periodMark = characters[lastCharacterIndex];
     if (/\s/.test(periodMark)) {
         const result = lineText.match(/\s+$/);
-        if(!result){
-            return;
+        if (!result) {
+            // TODO: this case will not ever happen
+            return {
+                valid: false,
+                periodMark: " ",
+                index: lastCharacterIndex - 1
+            };
         }
         const [whiteSpaces] = result;
         return {
